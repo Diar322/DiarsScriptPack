@@ -1,0 +1,30 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": ["Diar322"],
+		"url": "https://github.com/Diar322/DiarsScriptPack",
+		"license": "TBD"
+	},
+	"header": {
+		"name": "§l§1Diars Script pack",
+		"description": "§kjazz§r My first script pack §kjazz",
+		"uuid": "6e1bf86a-408c-4cc8-bfa3-e16e765271c8",
+		"version": [0, 0, 1],
+		"min_engine_version": [1, 14, 0]
+	},
+	"modules": [
+		{
+			"description": "Diar Script behavior pack module",
+			"type": "data",
+			"uuid": "a4bb8e28-c929-463e-9d6a-6d5f1fafc8ef",
+			"version": [0, 0, 1]
+		},
+		{
+			"description": "Diar Script client scripts module",
+			"type": "client_data",
+			"uuid": "105d78a9-4392-457d-bb6c-224e0c81a6dc",
+			"version": [0, 0, 1]
+		}
+	],
+	"dependencies": []
+}
