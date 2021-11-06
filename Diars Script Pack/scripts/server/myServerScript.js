@@ -1,26 +1,32 @@
 let sampleServerSystem = server.registerSystem(0, 0);
 
 // void start()
-sampleSystem.initialize = function() {
+sampleServerSystem.initialize = function() {
 	//register event data, register components, register queries, listen for events
-	this.listenForEvent("minecraft:player_attacked_entity", function(eventData) {
-		this.log("bruh");
-	});
+	log("bruh");
+	this.listenForEvent("minecraft:entity_acquired_item", (eventData) => this.onItemEvent(eventData));
 };
 
 
 //update 20 times a sec
-sampleSystem.update = function() {
+sampleServerSystem.update = function() {
 	//Update all the things
 };
 
 
 //on exit
-sampleSystem.shutdown = function() {
+sampleServerSystem.shutdown = function() {
 	//Cleanup script only things
 };
 
-systemClient.log = function (...items) {
+sampleServerSystem.onItemEvent = function(eventData) {
+	if (eventData.item_stack.__identifier__ == "minecraft:egg")
+	{
+		log("egg")
+	}
+};
+  
+sampleServerSystem.log = function (...items) {
 	// Convert every parameter into a legible string and collect them into an array.
 	const toString = (item) => {
 		switch (Object.prototype.toString.call(item)) {
